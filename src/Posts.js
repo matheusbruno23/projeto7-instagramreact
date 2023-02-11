@@ -1,45 +1,17 @@
 import Post from './Post'
 
 export default function Posts(){
+
+  const listaPost = [
+    {nome:'meowed', imgPerfil:"assets/img/meowed.svg", imgPost:"assets/img/gato-telefone.svg" , likes:92 , curtiu:'respondeai' , curtiuImg:"assets/img/respondeai.svg"},
+    {nome:'barked', imgPerfil:"assets/img/barked.svg", imgPost:"assets/img/dog.svg" , likes:2 , curtiu:'adorable_animals', curtiuImg:"assets/img/adorable_animals.svg"},
+    {nome:'meoked', imgPerfil:"assets/img/barked.svg", imgPost:"assets/img/gato-telefone.svg" , likes:5558 , curtiu:'adorable_respondeai', curtiuImg:"assets/img/respondeai.svg"},
+  ]
+
+
     return(
         <div class="posts">
-          <Post imgPost="assets/img/gato-telefone.svg" likes="92"/>
-
-        <div class="post">
-          <div class="topo">
-            <div class="usuario">
-              <img src="assets/img/barked.svg" alt="barked"/>
-              barked
-            </div>
-            <div class="acoes">
-              <ion-icon name="ellipsis-horizontal"></ion-icon>
-            </div>
-          </div>
-
-          <div class="conteudo">
-            <img src="assets/img/dog.svg" alt="dog" />
-          </div>
-
-          <div class="fundo">
-            <div class="acoes">
-              <div>
-                <ion-icon name="heart-outline"></ion-icon>
-                <ion-icon name="chatbubble-outline"></ion-icon>
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </div>
-              <div>
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </div>
-            </div>
-
-            <div class="curtidas">
-              <img src="assets/img/adorable_animals.svg" alt="adorable_animals"/>
-              <div class="texto">
-                Curtido por <strong>adorable_animals</strong> e <strong>outras 99.159 pessoas</strong>
-              </div>
-            </div>
-          </div>
-        </div>
+          {listaPost.map((pst) => <Post imgPost={pst.imgPost} likes={pst.likes} nome={pst.nome} imgPerfil={pst.imgPerfil} curtiu={pst.curtiu} curtiuImg={pst.curtiuImg}/>)}
       </div>
     )
 }

@@ -1,10 +1,10 @@
-import Navbar from './Navbar'
 import Corpo from './Corpo'
+import Navbar from './Navbar'
 export default function App(){
     return (
         <div>
-            <Navbar />
-            <Corpo />
+            <Navbar/>
+            <Corpo/>
         </div>
     )
 

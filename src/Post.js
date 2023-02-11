@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 
 export default function Post(props){
+
+
     const [like, setLike] = React.useState('heart-outline');
     const [corLike, setCorLike] = React.useState('preto');
     const [salvar, setSalvar] = React.useState('bookmark-outline');
-    const [numLikes, setNumLikes] = React.useState(92)
+    const [numLikes, setNumLikes] = React.useState(props.likes)
     
     
     function botaoSalvar(){
@@ -17,7 +19,7 @@ export default function Post(props){
     function botaoLike(){
         setCorLike('vermelho')
         setLike('heart')
-        setNumLikes(numLikes+1)
+        setNumLikes(numLikes +1)
         if(corLike === 'vermelho' || like === 'heart' ){
             setCorLike('preto')
             setLike('heart-outline')
@@ -29,8 +31,8 @@ export default function Post(props){
         <div data-test="post"class="post">
         <div class="topo">
           <div class="usuario">
-            <img src="assets/img/meowed.svg" alt="meowed"/>
-            meowed
+            <img src={props.imgPerfil} alt={props.nome}/>
+            {props.nome}
           </div>
           <div class="acoes">
             <ion-icon name="ellipsis-horizontal"></ion-icon>
@@ -38,7 +40,7 @@ export default function Post(props){
         </div>
 
         <div  class="conteudo" >
-          <img data-test="post-image" onClick={(corLike === 'preto') ? botaoLike : corLike ==='preto'}src={props.imgPost} alt="gato-telefone"/>
+          <img data-test="post-image" onClick={(corLike === 'preto') ? botaoLike : corLike ==='preto'}src={props.imgPost} alt={props.nome}/>
         </div>
 
         <div class="fundo">
@@ -54,9 +56,9 @@ export default function Post(props){
           </div>
 
           <div class="curtidas">
-            <img src="assets/img/respondeai.svg" alt="respondeai"/>
+            <img src={props.curtiuImg} alt="respondeai"/>
             <div class="texto">
-              Curtido por <strong>respondeai</strong> e <strong data-test="likes-number">outras {numLikes} pessoas</strong>
+              Curtido por <strong>{props.curtiu}</strong> e <strong data-test="likes-number">outras { numLikes} pessoas</strong>
             </div>
           </div>
         </div>

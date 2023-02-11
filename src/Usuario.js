@@ -1,7 +1,9 @@
 import React from 'react'
-export default function Usuario(){
-  const [nome , setNome] = React.useState('nomegenerico');
-  const [foto , setFoto] = React.useState('https://i.pinimg.com/474x/d9/4d/0e/d94d0e51ec2d07577eb64d1f1fb70b4c.jpg')
+export default function Usuario(props){
+  console.log(props)
+  const [nome , setNome] = React.useState(props.nome)
+  const [foto , setFoto] = React.useState(props.fotoperfil)
+
   function mudarNome(){
     const novoNome = prompt('Digite seu novo nome de usuario:')
     setNome(novoNome);
