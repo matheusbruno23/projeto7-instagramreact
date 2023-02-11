@@ -179,6 +179,12 @@ body {
 .post .conteudo img {
   width: 100%;
 }
+.vermelho{
+  color: red;
+}
+.preto{
+  color: #262626;
+}
 
 .post .fundo .acoes {
   display: flex;
