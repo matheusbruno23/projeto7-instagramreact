@@ -1,6 +1,5 @@
 import React from 'react'
 export default function Usuario(props){
-  console.log(props)
   const [nome , setNome] = React.useState(props.nome)
   const [foto , setFoto] = React.useState(props.fotoperfil)
 
@@ -24,9 +23,9 @@ export default function Usuario(props){
 
 
     return (
-        <div data-test="name" class="usuario">
+        <div data-test="name" className="usuario">
         <img data-test="profile-image" onClick={mudarFoto} src={foto} alt="URL Imagem Inválido"/>
-        <div class="texto">
+        <div className="texto">
           <span>
             <strong>{nome}</strong>
             <ion-icon data-test="edit-name" name="pencil" onClick={mudarNome} ></ion-icon>

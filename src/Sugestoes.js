@@ -13,13 +13,13 @@ export default function Sugestoes(){
 
 
     return (
-        <div class="sugestoes">
-        <div class="titulo">
+        <div className="sugestoes">
+        <div className="titulo">
           Sugestões para você
           <div>Ver tudo</div>
           
         </div>
-      {listaSugestoes.map((sug)=> <Sugestao nome={sug.nome} imagem={sug.imagem} texto={sug.texto}/>)}
+      {listaSugestoes.map((sug)=> <Sugestao key={sug.nome} nome={sug.nome} imagem={sug.imagem} texto={sug.texto}/>)}
       </div>
     )
 }

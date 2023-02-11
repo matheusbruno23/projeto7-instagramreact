@@ -1,6 +1,4 @@
 import Story from "./Story";
-import Storie from "./Story";
-
 
 export default function Stories(){
 
@@ -18,10 +16,10 @@ export default function Stories(){
 
 
     return (
-        <div class="stories">
-          {listaStories.map((sto) => <Story nomeStorie={sto.nome} imgStorie={sto.imagemStorie}/>)}
+        <div className="stories">
+          {listaStories.map((sto) => <Story key={sto.nome} nomeStorie={sto.nome} imgStorie={sto.imagemStorie}/>)}
           
-        <div class="setinha">
+        <div className="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
       </div>

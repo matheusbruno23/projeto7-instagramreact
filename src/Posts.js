@@ -10,8 +10,8 @@ export default function Posts(){
 
 
     return(
-        <div class="posts">
-          {listaPost.map((pst) => <Post imgPost={pst.imgPost} likes={pst.likes} nome={pst.nome} imgPerfil={pst.imgPerfil} curtiu={pst.curtiu} curtiuImg={pst.curtiuImg}/>)}
+        <div className="posts">
+          {listaPost.map((pst) => <Post key={pst.nome} imgPost={pst.imgPost} likes={pst.likes} nome={pst.nome} imgPerfil={pst.imgPerfil} curtiu={pst.curtiu} curtiuImg={pst.curtiuImg}/>)}
       </div>
     )
 }

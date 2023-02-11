@@ -28,25 +28,25 @@ export default function Post(props){
     }
 
     return(
-        <div data-test="post"class="post">
-        <div class="topo">
-          <div class="usuario">
+        <div data-test="post"className="post">
+        <div className="topo">
+          <div className="usuario">
             <img src={props.imgPerfil} alt={props.nome}/>
             {props.nome}
           </div>
-          <div class="acoes">
+          <div className="acoes">
             <ion-icon name="ellipsis-horizontal"></ion-icon>
           </div>
         </div>
 
-        <div  class="conteudo" >
+        <div  className="conteudo" >
           <img data-test="post-image" onClick={(corLike === 'preto') ? botaoLike : corLike ==='preto'}src={props.imgPost} alt={props.nome}/>
         </div>
 
-        <div class="fundo">
-          <div class="acoes">
+        <div className="fundo">
+          <div className="acoes">
             <div>
-              <ion-icon data-test="like-post" onClick={botaoLike} class={corLike} name={like}></ion-icon>
+              <ion-icon data-test="like-post" onClick={botaoLike} className={corLike} name={like}></ion-icon>
               <ion-icon name="chatbubble-outline"></ion-icon>
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
@@ -55,9 +55,9 @@ export default function Post(props){
             </div>
           </div>
 
-          <div class="curtidas">
+          <div className="curtidas">
             <img src={props.curtiuImg} alt="respondeai"/>
-            <div class="texto">
+            <div className="texto">
               Curtido por <strong>{props.curtiu}</strong> e <strong data-test="likes-number">outras { numLikes} pessoas</strong>
             </div>
           </div>
